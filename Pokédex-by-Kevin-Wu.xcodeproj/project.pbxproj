@@ -13,6 +13,7 @@
 		23A7C3C91C323CE300BF92AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A7C3C81C323CE300BF92AC /* Images.xcassets */; };
 		23A7C3CC1C323CE300BF92AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A7C3CA1C323CE300BF92AC /* LaunchScreen.xib */; };
 		23A7C3D81C323CE300BF92AC /* Poke_dex_by_Kevin_WuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7C3D71C323CE300BF92AC /* Poke_dex_by_Kevin_WuTests.swift */; };
+		23A7C3E21C323EE100BF92AC /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 23A7C3E11C323EE100BF92AC /* pokemon.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		23A7C3D11C323CE300BF92AC /* Pokédex-by-Kevin-WuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pokédex-by-Kevin-WuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A7C3D61C323CE300BF92AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23A7C3D71C323CE300BF92AC /* Poke_dex_by_Kevin_WuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poke_dex_by_Kevin_WuTests.swift; sourceTree = "<group>"; };
+		23A7C3E11C323EE100BF92AC /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				23A7C3C11C323CE300BF92AC /* AppDelegate.swift */,
 				23A7C3C31C323CE300BF92AC /* ViewController.swift */,
 				23A7C3C51C323CE300BF92AC /* Main.storyboard */,
+				23A7C3E11C323EE100BF92AC /* pokemon.csv */,
 				23A7C3C81C323CE300BF92AC /* Images.xcassets */,
 				23A7C3CA1C323CE300BF92AC /* LaunchScreen.xib */,
 				23A7C3BF1C323CE300BF92AC /* Supporting Files */,
@@ -194,6 +197,7 @@
 			files = (
 				23A7C3C71C323CE300BF92AC /* Main.storyboard in Resources */,
 				23A7C3CC1C323CE300BF92AC /* LaunchScreen.xib in Resources */,
+				23A7C3E21C323EE100BF92AC /* pokemon.csv in Resources */,
 				23A7C3C91C323CE300BF92AC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
