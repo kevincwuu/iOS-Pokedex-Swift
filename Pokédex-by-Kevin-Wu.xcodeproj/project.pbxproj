@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236FDF061C32FA2500569E1B /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 236FDF051C32FA2500569E1B /* pokemon.ttf */; };
+		236FDF081C33002400569E1B /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 236FDF071C33002400569E1B /* music.mp3 */; };
 		23A7C3C21C323CE300BF92AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7C3C11C323CE300BF92AC /* AppDelegate.swift */; };
 		23A7C3C41C323CE300BF92AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7C3C31C323CE300BF92AC /* ViewController.swift */; };
 		23A7C3C71C323CE300BF92AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A7C3C51C323CE300BF92AC /* Main.storyboard */; };
@@ -16,6 +18,7 @@
 		23A7C3E21C323EE100BF92AC /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 23A7C3E11C323EE100BF92AC /* pokemon.csv */; };
 		23A7C3E51C32403500BF92AC /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7C3E41C32403500BF92AC /* Pokemon.swift */; };
 		23A7C3E81C324EBF00BF92AC /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7C3E71C324EBF00BF92AC /* PokeCell.swift */; };
+		23A7C3EA1C325AE900BF92AC /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7C3E91C325AE900BF92AC /* csv.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		236FDF051C32FA2500569E1B /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
+		236FDF071C33002400569E1B /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		23A7C3BC1C323CE300BF92AC /* Pokédex-by-Kevin-Wu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokédex-by-Kevin-Wu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A7C3C01C323CE300BF92AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23A7C3C11C323CE300BF92AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		23A7C3E11C323EE100BF92AC /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		23A7C3E41C32403500BF92AC /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		23A7C3E71C324EBF00BF92AC /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		23A7C3E91C325AE900BF92AC /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +91,11 @@
 			children = (
 				23A7C3E31C32402700BF92AC /* Model */,
 				23A7C3E61C324E7F00BF92AC /* View */,
+				23A7C3EF1C325B4400BF92AC /* Controller */,
+				23A7C3EE1C325B3600BF92AC /* Util */,
+				23A7C3F01C325B8000BF92AC /* Resources */,
 				23A7C3C11C323CE300BF92AC /* AppDelegate.swift */,
-				23A7C3C31C323CE300BF92AC /* ViewController.swift */,
 				23A7C3C51C323CE300BF92AC /* Main.storyboard */,
-				23A7C3E11C323EE100BF92AC /* pokemon.csv */,
 				23A7C3C81C323CE300BF92AC /* Images.xcassets */,
 				23A7C3CA1C323CE300BF92AC /* LaunchScreen.xib */,
 				23A7C3BF1C323CE300BF92AC /* Supporting Files */,
@@ -137,6 +144,32 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		23A7C3EE1C325B3600BF92AC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				23A7C3E91C325AE900BF92AC /* csv.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		23A7C3EF1C325B4400BF92AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23A7C3C31C323CE300BF92AC /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		23A7C3F01C325B8000BF92AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				236FDF071C33002400569E1B /* music.mp3 */,
+				23A7C3E11C323EE100BF92AC /* pokemon.csv */,
+				236FDF051C32FA2500569E1B /* pokemon.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,6 +214,8 @@
 		23A7C3B41C323CE300BF92AC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Kevin Wu";
 				TargetAttributes = {
@@ -217,7 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236FDF061C32FA2500569E1B /* pokemon.ttf in Resources */,
 				23A7C3C71C323CE300BF92AC /* Main.storyboard in Resources */,
+				236FDF081C33002400569E1B /* music.mp3 in Resources */,
 				23A7C3CC1C323CE300BF92AC /* LaunchScreen.xib in Resources */,
 				23A7C3E21C323EE100BF92AC /* pokemon.csv in Resources */,
 				23A7C3C91C323CE300BF92AC /* Images.xcassets in Resources */,
@@ -242,6 +279,7 @@
 				23A7C3C41C323CE300BF92AC /* ViewController.swift in Sources */,
 				23A7C3C21C323CE300BF92AC /* AppDelegate.swift in Sources */,
 				23A7C3E51C32403500BF92AC /* Pokemon.swift in Sources */,
+				23A7C3EA1C325AE900BF92AC /* csv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +475,7 @@
 				23A7C3DD1C323CE300BF92AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23A7C3DE1C323CE300BF92AC /* Build configuration list for PBXNativeTarget "Pokédex-by-Kevin-WuTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +484,7 @@
 				23A7C3E01C323CE300BF92AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

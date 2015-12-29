@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -17,22 +23,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-KR-qPr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-KR-qPr">
                                 <rect key="frame" x="0.0" y="99" width="600" height="501"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-jf-D4P">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ub5-G7-qX2">
+                                        <rect key="frame" x="237" y="8" width="126" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="126" id="JbK-cc-ix8"/>
+                                            <constraint firstAttribute="height" constant="39" id="vDj-Vg-5ji"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="29"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4e-Dg-Ldy">
+                                        <rect key="frame" x="560" y="12" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="5OH-mb-Egk"/>
+                                            <constraint firstAttribute="height" constant="32" id="pG1-RK-GKV"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0no-bt-eGd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="x4e-Dg-Ldy" firstAttribute="top" secondItem="Ssf-jf-D4P" secondAttribute="top" constant="12" id="1dK-Dh-aat"/>
+                                    <constraint firstAttribute="trailing" secondItem="x4e-Dg-Ldy" secondAttribute="trailing" constant="8" id="HkD-ID-Twc"/>
+                                    <constraint firstItem="ub5-G7-qX2" firstAttribute="centerY" secondItem="Ssf-jf-D4P" secondAttribute="centerY" id="iGM-Cg-nsM"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="pmi-CN-3oj"/>
+                                    <constraint firstItem="ub5-G7-qX2" firstAttribute="centerX" secondItem="Ssf-jf-D4P" secondAttribute="centerX" id="rS3-9R-4x3"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="rpf-4t-aDT"/>
                                     <constraint firstAttribute="height" constant="55" id="xMj-fI-flA"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" ambiguous="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="ozj-LF-90u">
-                                <rect key="frame" x="0.0" y="55" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IHg-XC-wfp">
                                 <rect key="frame" x="16" y="116" width="560" height="464"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -43,8 +72,8 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SXV-1Q-83N" customClass="PokeCell" customModule="Poke_dex_by_Kevin_Wu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="SXV-1Q-83N" customClass="PokeCell" customModule="Poke_dex_by_Kevin_Wu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
@@ -83,32 +112,51 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" placeholder="Search for Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="ozj-LF-90u">
+                                <rect key="frame" x="0.0" y="55" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ssf-jf-D4P" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="1Re-HO-NTg"/>
                             <constraint firstItem="Ssf-jf-D4P" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="1Zd-dS-XC5"/>
+                            <constraint firstItem="IHg-XC-wfp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="2TC-JX-W4v"/>
                             <constraint firstItem="Ssf-jf-D4P" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="34W-P0-i0X"/>
+                            <constraint firstItem="IHg-XC-wfp" firstAttribute="top" secondItem="ozj-LF-90u" secondAttribute="bottom" constant="20" id="4cn-xV-jtq"/>
+                            <constraint firstItem="IHg-XC-wfp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="CRZ-Ls-anM"/>
                             <constraint firstItem="rJV-KR-qPr" firstAttribute="top" secondItem="Ssf-jf-D4P" secondAttribute="bottom" id="D0A-Dl-5D8"/>
                             <constraint firstAttribute="trailing" secondItem="ozj-LF-90u" secondAttribute="trailing" id="HY6-mh-Qw8"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IHg-XC-wfp" secondAttribute="bottom" constant="20" id="Hc5-QD-OBb"/>
                             <constraint firstItem="ozj-LF-90u" firstAttribute="top" secondItem="Ssf-jf-D4P" secondAttribute="bottom" id="J7e-pp-X0C"/>
                             <constraint firstItem="IHg-XC-wfp" firstAttribute="top" secondItem="ozj-LF-90u" secondAttribute="bottom" constant="20" id="MuN-GU-Meh"/>
                             <constraint firstItem="Ssf-jf-D4P" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Ohf-gS-u8S"/>
                             <constraint firstAttribute="trailing" secondItem="Ssf-jf-D4P" secondAttribute="trailing" id="PmP-pY-nb8"/>
+                            <constraint firstItem="IHg-XC-wfp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Qsu-hA-88B"/>
                             <constraint firstItem="IHg-XC-wfp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="V1Z-hW-K6q"/>
                             <constraint firstAttribute="trailing" secondItem="rJV-KR-qPr" secondAttribute="trailing" id="Vfc-SO-McK"/>
+                            <constraint firstItem="IHg-XC-wfp" firstAttribute="top" secondItem="ozj-LF-90u" secondAttribute="bottom" constant="20" id="WK6-vR-rcy"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IHg-XC-wfp" secondAttribute="bottom" constant="20" id="bUe-NM-Ndu"/>
                             <constraint firstItem="Ssf-jf-D4P" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="bXR-Bj-bnx"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rJV-KR-qPr" secondAttribute="bottom" id="biE-Bx-nqw"/>
+                            <constraint firstItem="IHg-XC-wfp" firstAttribute="top" secondItem="ozj-LF-90u" secondAttribute="bottom" constant="20" id="faF-EQ-yvB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IHg-XC-wfp" secondAttribute="trailing" id="fxH-lw-zgp"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IHg-XC-wfp" secondAttribute="bottom" constant="20" id="g0p-EY-hMh"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IHg-XC-wfp" secondAttribute="bottom" constant="20" id="hyA-J8-obJ"/>
                             <constraint firstItem="rJV-KR-qPr" firstAttribute="top" secondItem="ozj-LF-90u" secondAttribute="bottom" id="iC1-QQ-IUp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IHg-XC-wfp" secondAttribute="trailing" constant="20" id="j8O-sG-E9b"/>
                             <constraint firstAttribute="trailing" secondItem="Ssf-jf-D4P" secondAttribute="trailing" id="kir-Z6-MC6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IHg-XC-wfp" secondAttribute="trailing" constant="20" id="kvq-5a-1hX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IHg-XC-wfp" secondAttribute="trailing" constant="8" id="l0O-zI-syY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ssf-jf-D4P" secondAttribute="trailing" id="lQy-nT-Y5k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IHg-XC-wfp" secondAttribute="trailing" constant="20" id="mXs-eC-9HF"/>
                             <constraint firstItem="IHg-XC-wfp" firstAttribute="top" secondItem="ozj-LF-90u" secondAttribute="bottom" constant="20" id="mpc-NG-pEW"/>
+                            <constraint firstItem="IHg-XC-wfp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="pMA-Qi-WZZ"/>
                             <constraint firstItem="rJV-KR-qPr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="r1J-F5-OrD"/>
                             <constraint firstItem="IHg-XC-wfp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="uDI-fw-Lhn"/>
+                            <constraint firstItem="IHg-XC-wfp" firstAttribute="top" secondItem="ozj-LF-90u" secondAttribute="bottom" constant="20" id="us5-jD-1G4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IHg-XC-wfp" secondAttribute="trailing" constant="20" id="w0n-Ad-Hip"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IHg-XC-wfp" secondAttribute="bottom" constant="20" id="wqV-lf-rPs"/>
                             <constraint firstItem="ozj-LF-90u" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="yOe-RB-g0t"/>
                             <constraint firstItem="Ssf-jf-D4P" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ydN-hP-l18"/>
                         </constraints>
@@ -118,13 +166,19 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="IHg-XC-wfp" id="yFs-Hu-lCl"/>
+                        <outlet property="searchBar" destination="ozj-LF-90u" id="aQb-ak-ZeR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="297" y="284"/>
         </scene>
     </scenes>
     <resources>
         <image name="297" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music" width="100" height="100"/>
     </resources>
 </document>
